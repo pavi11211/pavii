@@ -1,169 +1,54 @@
 /* Reset some default styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Body and general styles */
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #fff;
-  }
-  
-  /* Header */
-  header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
-  }
-  
-  header .logo img {
-    width: 120px;
-  }
-  
-  nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-  }
-  
-  nav ul li {
-    margin: 0 15px;
-  }
-  
-  nav ul li a {
-    color: #fff;
-    font-size: 18px;
-  }
-  
-  /* Homepage */
-  .hero {
-    text-align: center;
-    padding: 5rem 2rem;
-    background: #5c8e9c;
-    color: #fff;
-  }
-  
-  .hero h1 {
-    font-size: 3rem;
-  }
-  
-  .hero p {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .hero .btn {
-    background-color: #f07a3e;
-    padding: 0.8rem 2rem;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-  }
-  
-  /* About Us */
-  .about-us {
-    padding: 2rem 1rem;
-    background: #fff;
-    text-align: center;
-  }
-  
-  .about-us p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  /* Sessions Section */
-  .sessions {
-    display: flex;
-    justify-content: space-around;
-    background: #e2e2e2;
-    padding: 2rem;
-  }
-  
-  .session {
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 30%;
-  }
-  
-  .session h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .session .btn {
-    background-color: #5c8e9c;
-    padding: 0.7rem 1.5rem;
-    border-radius: 5px;
-    font-size: 1rem;
-    margin-top: 1rem;
-  }
-  
-  /* Contact Section */
-  .contact {
-    background: #fff;
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  .contact form {
-    max-width: 500px;
-    margin: 0 auto;
-  }
-  
-  .contact label {
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-  
-  .contact input, .contact textarea {
-    width: 100%;
-    padding: 0.8rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .contact .btn {
-    background-color: #5c8e9c;
-    padding: 0.8rem 2rem;
-    border-radius: 5px;
-    font-size: 1rem;
-  }
-  
-  /* Footer */
-  footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-  }
-/* Logo in Home Section */
-.home-logo {
-  width: 180px;           /* larger size for home section */
-  height: auto;
-  margin-bottom: 1rem;
-  border-radius: 50%;     /* optional, if you want it rounded */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* optional shadow for style */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media(max-width: 768px) {
-  .home-logo {
-    width: 120px;
-  }
+/* Body and general styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
 }
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Header/Nav */
+header {
+  background: #333;
+  padding: 0.5rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+nav ul li a:hover {
+  background: #5c8e9c;
+}
+
 /* Hero Section */
 .hero {
   padding: 4rem 1rem;
@@ -176,21 +61,19 @@
   justify-content: center;
 }
 
-/* Logo inside Home Section */
 .home-logo {
   width: 180px;
   height: auto;
   margin-bottom: 1rem;
-  border-radius: 50%;             /* optional */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* optional */
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: transform 0.3s;
 }
 
 .home-logo:hover {
-  transform: scale(1.05); /* optional hover effect */
+  transform: scale(1.05);
 }
 
-/* Heading and paragraph styles inside hero */
 .hero h1 {
   font-size: 2.2rem;
   margin-bottom: 0.5rem;
@@ -208,8 +91,6 @@
   border-radius: 5px;
   font-size: 1.1rem;
   text-transform: uppercase;
-  text-decoration: none;
-  color: #fff;
   transition: background 0.3s;
 }
 
@@ -217,11 +98,104 @@
   background-color: #d65e24;
 }
 
-/* Responsive adjustments */
-@media(max-width: 768px) {
-  .home-logo {
-    width: 120px;
-  }
+/* About Us Section */
+.about-us {
+  padding: 2rem 1rem;
+  background: #fff;
+  text-align: center;
+}
+
+.about-us p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Sessions Section */
+.sessions {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background: #e2e2e2;
+  padding: 2rem 1rem;
+  gap: 1.5rem;
+}
+
+.session {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+
+.session h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.session .btn {
+  background-color: #5c8e9c;
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.session .btn:hover {
+  background-color: #487381;
+}
+
+/* Contact Section */
+.contact {
+  background: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.contact form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact label {
+  display: block;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.contact input, .contact textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact .btn {
+  background-color: #5c8e9c;
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.contact .btn:hover {
+  background-color: #487381;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Responsive Styles */
+@media(max-width:768px) {
   .hero h1 {
     font-size: 1.8rem;
   }
@@ -233,6 +207,11 @@
     padding: 0.6rem 1.5rem;
     font-size: 1rem;
   }
+  .home-logo {
+    width: 120px;
+  }
+  .sessions {
+    flex-direction: column;
+    align-items: center;
+  }
 }
-
-  
